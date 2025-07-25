@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import SubscribePage from "./pages/SubscribePage";
-import SubscribePage from "./pages/LoginPage";
-import Dashboard from "./pages/Dashboard";
+import SubscribePage from "./SubscribePage";
+import LoginPage from "./LoginPage";
+import Dashboard from "./Dashboard";
 import { useTranslation } from "react-i18next";
 
 export default function App() {
