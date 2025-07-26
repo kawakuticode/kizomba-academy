@@ -1,3 +1,4 @@
+// src/services/i18n/i18n.js (assuming this is the correct path)
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
@@ -6,22 +7,68 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        title: "Dilson Kizomba Academy",
-        selectLevel: "Select Level",
-        sendMessage: "Send Message",
+        // Existing keys (potentially updated values if different)
+        title: "Dilson Kizomba Academy", // Kept original, LoginPage uses generic "title"
+        features: "Features",
+        levels: "Levels",
+        pricing: "Pricing",
+        lessons: "Lessons",
+        contact: "Contact",
         beginner: "Beginner",
         intermediate: "Intermediate",
         advanced: "Advanced",
         teacher: "Teacher",
+        signInTitle: "Sign in to your account",
+        signInDescription: "Enter your credentials to access your dashboard.",
+        emailAddress: "Email address",
+        emailPlaceholder: "you@example.com",
+        password: "Password",
+        forgotPassword: "Forgot your password?",
+        passwordPlaceholder: "••••••••",
+        signingIn: "Signing in...",
+        signIn: "Sign in",
+        or: "Or",
+        createAccount: "Create an account", // Used in LoginPage link text
+        dontHaveAccount: "Don't have an account?",
+        registerNow: "Register now",
+        // Error messages for LoginPage
+        emailRequired: "Email is required.",
+        passwordRequired: "Password is required.",
+        invalidCredentials: "Invalid email or password.",
+        loginFailed: "Login failed. Please try again.",
+        // SubscribePage specific keys
+        registerTitle: "Create Your Account",
+        registerDescription: "Join the Dilson Kizomba Academy community and start your dance journey today.",
+        firstName: "First Name",
+        firstNamePlaceholder: "e.g., John",
+        lastName: "Last Name",
+        lastNamePlaceholder: "e.g., Doe",
+        gender: "Gender",
+        selectGender: "Select Gender",
+        male: "Male",
+        female: "Female",
+        other: "Other",
+        preferNotToSay: "Prefer not to say",
+        // Note: 'email' and 'emailPlaceholder' are reused from LoginPage context if distinct labels are needed, define them here.
+        // email: "Email Address", // Uncomment and define if different from emailAddress
+        // emailPlaceholder: "yourname@example.com", // Uncomment and define if different from LoginPage's emailPlaceholder
+        // Note: 'password' and 'passwordPlaceholder' are reused from LoginPage context if distinct labels are needed, define them here.
+        // password: "Password", // Uncomment and define if different from LoginPage's password
+        // passwordPlaceholder: "Create a strong password", // Uncomment and define if different from LoginPage's passwordPlaceholder
+        phone: "Phone Number",
+        phoneTooLong: "This phone number seems too long.",
+        phoneTooShort: "This phone number seems too short.",
+        pleaseCorrectPhone: "Please correct the phone number before submitting.",
+        phoneFormatHint: "Select your country and enter your full phone number.",
+        // Note: 'selectLevel' is reused from other parts of the app if distinct label is needed, define it here.
+        // selectLevel: "Select Your Dance Level", // Uncomment and define if different from the existing selectLevel
+        // Other existing keys...
+        selectLevel: "Select Level", // Ensure this key exists for SubscribePage dropdown label
+        sendMessage: "Send Message",
         startLearning: "Start Learning Today",
         watchDemo: "Watch Demo",
-        features: "Features",
-        levels: "Levels",
-        pricing: "Pricing",
         login: "Login",
-        lessons: "Lessons",
-        contact: "Contact",
-        subscribeNow: "Subscribe Now",
+        subscribeNow: "Subscribe Now", // Although requested to remove button, key might still be used elsewhere or kept for now
         heroLine1: "Master the Art of Kizomba with",
         heroDescription: "Monthly subscription access to structured dance lessons for all levels.",
         whyChooseTitle: "Why Choose Our Academy?",
@@ -47,7 +94,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         customLessonPlan: "Custom lesson plan",
         getInTouch: "Get In Touch",
         name: "Name",
-        email: "Email",
+        email: "Email", // Used in contact form
         message: "Message",
         messageplaceholder: "How can we help you?",
         quickLinks: "Quick Links",
@@ -73,43 +120,88 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         correctingCommonMistakes: "Correcting Common Mistakes",
         savePercent: "Save 17% ($30 off)",
         subscribe: "Subscribe",
-         "welcomeBack": "Welcome back",
-  "yourLevel": "Your Level",
-  "lessonsCompleted": "Lessons Completed",
-  "memberSince": "Member Since",
-  "yourLevelVideos": "{{level}} Level Videos",
-  "viewAll": "View All",
-  "video": "Video",
-  "yourProgress": "Your Progress",
-  "complete": "Complete",
-  "progressMessage": "You've completed {{completed}} out of {{total}} lessons. Keep going to reach {{nextLevel}} level!",
-  "loading": "Loading your dashboard...",
-  "title": "Kizomba Academy",
-  "dashboard": "Dashboard",
-  "lessons": "Lessons",
-  "progress": "Progress",
-  "profile": "Profile",
-  "logout": "Logout"
+        welcomeBack: "Welcome back",
+        yourLevel: "Your Level",
+        lessonsCompleted: "Lessons Completed",
+        memberSince: "Member Since",
+        yourLevelVideos: "{{level}} Level Videos",
+        viewAll: "View All",
+        video: "Video",
+        yourProgress: "Your Progress",
+        complete: "Complete",
+        progressMessage: "You've completed {{completed}} out of {{total}} lessons. Keep going to reach {{nextLevel}} level!",
+        loading: "Loading your dashboard...",
+        dashboard: "Dashboard",
+        progress: "Progress",
+        profile: "Profile",
+        logout: "Logout",
+        pageNotFoundTitle: "Page Not Found",
+        pageNotFoundDescription: "Sorry, the page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+        backToHome: "Go Back Home"
+        // Add more keys as needed...
       },
     },
     fr: {
       translation: {
-        title: "Académie Dilson Kizomba",
-        selectLevel: "Choisir le niveau",
-        sendMessage: "Envoyer le message",
+        // Existing keys (potentially updated values if different)
+        title: "Académie Dilson Kizomba", // Kept original, LoginPage uses generic "title"
+        features: "Fonctionnalités",
+        levels: "Niveaux",
+        pricing: "Tarifs",
+        lessons: "Cours",
+        contact: "Contact",
         beginner: "Débutant",
         intermediate: "Intermédiaire",
         advanced: "Avancé",
         teacher: "Enseignant",
+        signInTitle: "Connectez-vous à votre compte",
+        signInDescription: "Entrez vos identifiants pour accéder à votre tableau de bord.",
+        emailAddress: "Adresse e-mail",
+        emailPlaceholder: "vous@exemple.com",
+        password: "Mot de passe",
+        forgotPassword: "Mot de passe oublié ?",
+        passwordPlaceholder: "••••••••",
+        signingIn: "Connexion en cours...",
+        signIn: "Se connecter",
+        or: "Ou",
+        createAccount: "Créer un compte", // Used in LoginPage link text
+        dontHaveAccount: "Vous n'avez pas de compte ?",
+        registerNow: "S'inscrire maintenant",
+        // Error messages for LoginPage
+        emailRequired: "L'email est requis.",
+        passwordRequired: "Le mot de passe est requis.",
+        invalidCredentials: "Email ou mot de passe invalide.",
+        loginFailed: "Échec de la connexion. Veuillez réessayer.",
+        // SubscribePage specific keys
+        registerTitle: "Créez votre compte",
+        registerDescription: "Rejoignez la communauté de l'Académie Dilson Kizomba et commencez votre parcours de danse dès aujourd'hui.",
+        firstName: "Prénom",
+        firstNamePlaceholder: "ex. : Jean",
+        lastName: "Nom de famille",
+        lastNamePlaceholder: "ex. : Dupont",
+        gender: "Genre",
+        selectGender: "Sélectionner le genre",
+        male: "Homme",
+        female: "Femme",
+        other: "Autre",
+        preferNotToSay: "Préfère ne pas répondre",
+        // email: "Adresse e-mail", // Uncomment if different
+        // emailPlaceholder: "votrenom@exemple.com", // Uncomment if different
+        // password: "Mot de passe", // Uncomment if different
+        // passwordPlaceholder: "Créez un mot de passe fort", // Uncomment if different
+        phone: "Numéro de téléphone",
+        phoneTooLong: "Ce numéro de téléphone semble trop long.",
+        phoneTooShort: "Ce numéro de téléphone semble trop court.",
+        pleaseCorrectPhone: "Veuillez corriger le numéro de téléphone avant de soumettre.",
+        phoneFormatHint: "Sélectionnez votre pays et entrez votre numéro de téléphone complet.",
+        // selectLevel: "Sélectionnez votre niveau de danse", // Uncomment if different
+        selectLevel: "Choisir le niveau", // Ensure this key exists
+        // Other existing keys...
+        sendMessage: "Envoyer le message",
         startLearning: "Commencer à apprendre aujourd'hui",
         watchDemo: "Voir la démo",
-        features: "Fonctionnalités",
-        levels: "Niveaux",
-        pricing: "Tarifs",
         login: "Login",
-        lessons: "Cours",
-        contact: "Contact",
-        subscribeNow: "S'abonner maintenant",
+        subscribeNow: "S'abonner maintenant", // Although requested to remove button, key might still be used elsewhere or kept for now
         heroLine1: "Maîtrisez l'art du Kizomba avec",
         heroDescription: "Accès mensuel structuré aux cours de danse pour tous les niveaux.",
         whyChooseTitle: "Pourquoi choisir notre académie ?",
@@ -131,12 +223,13 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         downloadableResources: "Ressources téléchargeables",
         exclusiveBonusContent: "Contenu bonus exclusif",
         personalFeedback: "Retour personnalisé sur vos vidéos",
-        privateQAsessions: "Sessions privées de questions/réponses",
+        privateQASessions: "Sessions privées de questions/réponses",
         customLessonPlan: "Plan de cours personnalisé",
         getInTouch: "Contactez-nous",
         name: "Nom",
-        email: "E-mail",
+        email: "E-mail", // Used in contact form
         message: "Message",
+        messageplaceholder: "Comment pouvons-nous vous aider ?", // Added translation
         quickLinks: "Liens rapides",
         legal: "Mentions légales",
         termsAndConditions: "Conditions générales",
@@ -160,44 +253,88 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         correctingCommonMistakes: "Corriger les erreurs courantes",
         savePercent: "Économisez 17% (€30 off)",
         subscribe: "S'abonner",
-         "welcomeBack": "Bon retour",
-  "yourLevel": "Votre niveau",
-  "lessonsCompleted": "Leçons terminées",
-  "memberSince": "Membre depuis",
-  "yourLevelVideos": "Vidéos de niveau {{level}}",
-  "viewAll": "Tout voir",
-  "video": "Vidéo",
-  "yourProgress": "Votre progression",
-  "complete": "Terminé",
-  "progressMessage": "Vous avez terminé {{completed}} leçons sur {{total}}. Continuez pour atteindre le niveau {{nextLevel}} !",
-  "loading": "Chargement de votre tableau de bord...",
-  "title": "Académie de Kizomba",
-  "dashboard": "Tableau de bord",
-  "lessons": "Leçons",
-  "progress": "Progrès",
-  "profile": "Profil",
-  "logout": "Déconnexion"
-        
+        welcomeBack: "Bon retour",
+        yourLevel: "Votre niveau",
+        lessonsCompleted: "Leçons terminées",
+        memberSince: "Membre depuis",
+        yourLevelVideos: "Vidéos de niveau {{level}}",
+        viewAll: "Tout voir",
+        video: "Vidéo",
+        yourProgress: "Votre progression",
+        complete: "Terminé",
+        progressMessage: "Vous avez terminé {{completed}} leçons sur {{total}}. Continuez pour atteindre le niveau {{nextLevel}} !",
+        loading: "Chargement de votre tableau de bord...",
+        dashboard: "Tableau de bord",
+        progress: "Progrès",
+        profile: "Profil",
+        logout: "Déconnexion",
+        pageNotFoundTitle: "Page non trouvée",
+        pageNotFoundDescription: "Désolé, la page que vous recherchez a peut-être été supprimée, a changé de nom ou est temporairement indisponible.",
+        backToHome: "Retour à l'accueil"
+        // Add more keys as needed...
       },
     },
     pt: {
       translation: {
-        title: "Academia Dilson Kizomba",
-        selectLevel: "Selecionar Nível",
-        sendMessage: "Enviar Mensagem",
+        // Existing keys (potentially updated values if different)
+        title: "Academia Dilson Kizomba", // Kept original, LoginPage uses generic "title"
+        features: "Recursos",
+        levels: "Níveis",
+        pricing: "Preços",
+        lessons: "Aulas",
+        contact: "Contato",
         beginner: "Iniciante",
         intermediate: "Intermediário",
         advanced: "Avançado",
         teacher: "Professor",
+        signInTitle: "Entre na sua conta",
+        signInDescription: "Digite suas credenciais para acessar seu painel.",
+        emailAddress: "Endereço de e-mail",
+        emailPlaceholder: "voce@exemplo.com",
+        password: "Senha",
+        forgotPassword: "Esqueceu sua senha?",
+        passwordPlaceholder: "••••••••",
+        signingIn: "Entrando...",
+        signIn: "Entrar",
+        or: "Ou",
+        createAccount: "Criar uma conta", // Used in LoginPage link text
+        dontHaveAccount: "Não tem uma conta?",
+        registerNow: "Registre-se agora",
+        // Error messages for LoginPage
+        emailRequired: "O e-mail é obrigatório.",
+        passwordRequired: "A senha é obrigatória.",
+        invalidCredentials: "E-mail ou senha inválidos.",
+        loginFailed: "Falha no login. Por favor, tente novamente.",
+        // SubscribePage specific keys
+        registerTitle: "Crie sua conta",
+        registerDescription: "Junte-se à comunidade da Academia Dilson Kizomba e comece sua jornada de dança hoje.",
+        firstName: "Primeiro Nome",
+        firstNamePlaceholder: "ex.: João",
+        lastName: "Sobrenome",
+        lastNamePlaceholder: "ex.: Silva",
+        gender: "Gênero",
+        selectGender: "Selecione o gênero",
+        male: "Masculino",
+        female: "Feminino",
+        other: "Outro",
+        preferNotToSay: "Prefiro não informar",
+        // email: "Endereço de e-mail", // Uncomment if different
+        // emailPlaceholder: "seunome@exemplo.com", // Uncomment if different
+        // password: "Senha", // Uncomment if different
+        // passwordPlaceholder: "Crie uma senha forte", // Uncomment if different
+        phone: "Número de telefone",
+        phoneTooLong: "Este número de telefone parece muito longo.",
+        phoneTooShort: "Este número de telefone parece muito curto.",
+        pleaseCorrectPhone: "Por favor, corrija o número de telefone antes de enviar.",
+        phoneFormatHint: "Selecione seu país e digite seu número de telefone completo.",
+        // selectLevel: "Selecione seu nível de dança", // Uncomment if different
+        selectLevel: "Selecionar Nível", // Ensure this key exists
+        // Other existing keys...
+        sendMessage: "Enviar Mensagem",
         startLearning: "Comece a Aprender Hoje",
         watchDemo: "Assistir Demonstração",
-        features: "Recursos",
-        levels: "Níveis",
-        pricing: "Preços",
         login: "Entrar",
-        lessons: "Aulas",
-        contact: "Contato",
-        subscribeNow: "Assinar agora",
+        subscribeNow: "Assinar agora", // Although requested to remove button, key might still be used elsewhere or kept for now
         heroLine1: "Domine a arte do Kizomba com",
         heroDescription: "Acesso mensal estruturado às aulas de dança para todos os níveis.",
         whyChooseTitle: "Por que escolher nossa academia?",
@@ -219,12 +356,13 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         downloadableResources: "Recursos baixáveis",
         exclusiveBonusContent: "Conteúdo bônus exclusivo",
         personalFeedback: "Feedback pessoal nos vídeos",
-        privateQAsessions: "Sessões privadas de perguntas e respostas",
+        privateQASessions: "Sessões privadas de perguntas e respostas",
         customLessonPlan: "Plano de aula personalizado",
         getInTouch: "Entre em contato",
         name: "Nome",
-        email: "E-mail",
+        email: "E-mail", // Used in contact form
         message: "Mensagem",
+        messageplaceholder: "Como podemos ajudá-lo?", // Added translation
         quickLinks: "Links rápidos",
         legal: "Jurídico",
         termsAndConditions: "Termos e Condições",
@@ -248,31 +386,33 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         correctingCommonMistakes: "Corrigindo Erros Comuns",
         savePercent: "Economize 17% (R$30 off)",
         subscribe: "Assinar",
-        "welcomeBack": "Bem-vindo de volta",
-  "yourLevel": "Seu Nível",
-  "lessonsCompleted": "Lições Concluídas",
-  "memberSince": "Membro Desde",
-  "yourLevelVideos": "Vídeos do Nível {{level}}",
-  "viewAll": "Ver Todos",
-  "video": "Vídeo",
-  "yourProgress": "Seu Progresso",
-  "complete": "Completo",
-  "progressMessage": "Você completou {{completed}} de {{total}} lições. Continue para alcançar o nível {{nextLevel}}!",
-  "loading": "Carregando seu painel...",
-  "title": "Academia de Kizomba",
-  "dashboard": "Painel",
-  "lessons": "Lições",
-  "progress": "Progresso",
-  "profile": "Perfil",
-  "logout": "Sair"
+        welcomeBack: "Bem-vindo de volta",
+        yourLevel: "Seu Nível",
+        lessonsCompleted: "Lições Concluídas",
+        memberSince: "Membro Desde",
+        yourLevelVideos: "Vídeos do Nível {{level}}",
+        viewAll: "Ver Todos",
+        video: "Vídeo",
+        yourProgress: "Seu Progresso",
+        complete: "Completo",
+        progressMessage: "Você completou {{completed}} de {{total}} lições. Continue para alcançar o nível {{nextLevel}}!",
+        loading: "Carregando seu painel...",
+        dashboard: "Painel",
+        progress: "Progresso",
+        profile: "Perfil",
+        logout: "Sair",
+        pageNotFoundTitle: "Página não encontrada",
+        pageNotFoundDescription: "Desculpe, a página que você está procurando pode ter sido removida, teve seu nome alterado ou está temporariamente indisponível.",
+        backToHome: "Voltar para a página inicial"
+        // Add more keys as needed...
       },
     },
   },
-  debuge:true,
+  debug: true, // Corrected typo from previous version if it existed
   lng: "en",
   fallbackLng: "en",
   interpolation: {
-    escapeValue: false,
+    escapeValue: false, // React already escapes by default
   },
 });
 

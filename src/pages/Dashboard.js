@@ -9,7 +9,7 @@ export default function UserDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const {t, i18n } = useTranslation();
 
   // Mock video data organized by level
   const videoData = {

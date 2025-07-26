@@ -14,7 +14,7 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const {t, i18n } = useTranslation();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -85,23 +85,7 @@ export default function LoginPage() {
 
           {/* Desktop Navigation + Language Selector */}
           <div className="hidden md:flex items-center space-x-6">
-            <nav className="flex space-x-6 text-sm font-medium">
-              <a href="#features" className="hover:text-pink-500 transition">
-                {t("features")}
-              </a>
-              <a href="#levels" className="hover:text-pink-500 transition">
-                {t("levels")}
-              </a>
-              <a href="#pricing" className="hover:text-pink-500 transition">
-                {t("pricing")}
-              </a>
-              <a href="#lessons" className="hover:text-pink-500 transition">
-                {t("lessons")}
-              </a>
-              <a href="#contact" className="hover:text-pink-500 transition">
-                {t("contact")}
-              </a>
-            </nav>
+            
 
             {/* Language Selector Buttons */}
             <div className="flex space-x-2">
@@ -153,57 +137,7 @@ export default function LoginPage() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="absolute top-16 left-0 right-0 bg-black p-4 md:hidden shadow-lg">
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <a
-                  href="#features"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block hover:text-pink-500 transition"
-                >
-                  {t("features")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#levels"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block hover:text-pink-500 transition"
-                >
-                  {t("levels")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block hover:text-pink-500 transition"
-                >
-                  {t("pricing")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#lessons"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block hover:text-pink-500 transition"
-                >
-                  {t("lessons")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block hover:text-pink-500 transition"
-                >
-                  {t("contact")}
-                </a>
-              </li>
-            </ul>
-          </nav>
-        )}
+       
       </header>
 
       {/* Login Form Section */}
